@@ -5,8 +5,9 @@ import random
 import time
 import numpy as np
 
-sizes = [100, 200, 500, 1000, 1500, 2000, 3000, 4000, 5000, 10000]
-k = 50
+#sizes = [100, 200, 500, 1000, 1500, 2000, 3000, 4000, 5000, 10000]
+sizes = [10, 50, 100, 250, 500, 1000, 2000, 2500, 3000, 5000]
+k = 10
 reps = 10
 
 insertion_results = []
@@ -59,7 +60,7 @@ for size in sizes:
         })
     
 #Printar resultados do Merge sort
-print("Tempos do Merge Sort:")
+print("\033[1;31mTempos do Merge Sort:\033[0m")
 for result in merge_results:
     size = result['size']
     avg_time_merge = result['avg_time']
@@ -71,7 +72,7 @@ print()
 print()
 
 #Printar resultados do Insertion sort
-print("Tempos do Insertion Sort:")
+print("\033[1;31mTempos do Insertion Sort:\033[0m")
 for result in insertion_results:
     size = result['size']
     avg_time_insertion = result['avg_time']
